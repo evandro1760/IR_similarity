@@ -19,10 +19,14 @@ class Indexer:
         dw = {}
         
         for doc in documents:
+            #print(doc.get_content())
             for word in doc.get_content():
                 if(word not in sw):
                     w = self.__process_word(word)
+                    #print(w)
                     self.__index.add_term_frequency(w, doc.get_name())
 
     def show_if(self):
-        print(self.__index.get_if())
+        in_fi = self.__index.get_if()
+        for word in in_fi:
+            print(word,in_fi[word])

@@ -13,10 +13,11 @@ class Preprocessor:
             lines = open('docs/' + doc, 'r').readlines()
             bow = []
             for line in lines:
-                line = re.sub(r'[-./?!,":;()\']',' ', line)
-                bow.append(line.lower().split(' '))
-                d = Document(doc, bow)
-                documents.append(d)
+                line = re.sub(r'[-./?!,":;()\']',' ', line.lower())
+                bow += line.split(' ')
+                #print(doc, bow)
+            d = Document(doc, bow)
+            documents.append(d)
         return documents
                 
                 
