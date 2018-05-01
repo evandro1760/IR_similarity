@@ -1,0 +1,2 @@
+class Consult:
+    private query
