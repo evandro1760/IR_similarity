@@ -3,7 +3,6 @@ from copy import deepcopy as dp
 
 from model.document import Document
 import re
-#re.sub(r'[-./?!,":;()\']',' ', text)
 
 class Preprocessor:
     
@@ -15,7 +14,6 @@ class Preprocessor:
             for line in lines:
                 line = re.sub(r'[-./?!,":;()\']',' ', line.lower())
                 bow += line.split(' ')
-                #print(doc, bow)
             d = Document(doc, bow)
             documents.append(d)
         return documents

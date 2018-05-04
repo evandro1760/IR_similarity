@@ -7,7 +7,6 @@ class Index:
         self.__inverted_file[word] = {}
 
     def add_term_frequency(self, word, doc):
-        #print(word)
         if(word not in self.__inverted_file):
             self.__add_word(word)
         if(doc not in self.__inverted_file[word]):
