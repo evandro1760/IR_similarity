@@ -1,4 +1,5 @@
 from components.preprocessor import Preprocessor
+from components.printer import PrettyPrint
 from model.index import Index
 
 class Indexer:
@@ -25,6 +26,12 @@ class Indexer:
                     self.__index.add_term_frequency(w, doc.get_name())
 
     def show_if(self):
+        tab = []
         in_fi = self.__index.get_if()
         for word in in_fi:
-            print(word,in_fi[word])
+            line = [word, str(len(in_fi[word]))]
+            for doc in in_fi[word]:
+                line += [doc, str(in_fi[word][doc])]
+            tab.append(line)
+        
+        print(PrettyPrint(tab,'L'))
