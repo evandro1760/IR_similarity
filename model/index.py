@@ -1,3 +1,5 @@
+from components.printer import PrettyPrint
+
 class Index:
 
     def __init__(self):
@@ -15,4 +17,14 @@ class Index:
         self.__inverted_file[word][doc] += 1
 
     def get_if(self):
-        return self.__inverted_file 
+        return self.__inverted_file
+    
+    def show_if(self):
+        tab = []
+        for word in self.__inverted_file:
+            line = [word, str(len(self.__inverted_file[word]))]
+            for doc in self.__inverted_file[word]:
+                line += [doc, str(self.__inverted_file[word][doc])]
+            tab.append(line)
+        
+        return PrettyPrint(tab,'L')
