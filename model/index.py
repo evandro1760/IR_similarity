@@ -19,7 +19,7 @@ class Index:
     def get_if(self):
         return self.__inverted_file
     
-    def show_if(self):
+    def show_index(self):
         tab = []
         for word in self.__inverted_file:
             line = [word, str(len(self.__inverted_file[word]))]

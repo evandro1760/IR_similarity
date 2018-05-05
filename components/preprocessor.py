@@ -1,6 +1,4 @@
 from os import listdir as la
-from copy import deepcopy as dp
-
 from model.document import Document
 import re
 

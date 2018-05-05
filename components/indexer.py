@@ -20,5 +20,5 @@ class Indexer:
                     w = self.__process_word(word)
                     self.__index.add_term_frequency(w, doc.get_name())
         
-    def get_inverted_index(self):
+    def get_index(self):
         return self.__index
