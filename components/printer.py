@@ -25,7 +25,7 @@ def PrettyPrint(table, justify = "R", columnWidth = 0):
     print(outputStr)
     return outputStr
 
-def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wrap", row_line=False, fix_col_width=False):
+def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wrap", row_line=True, fix_col_width=True):
     ''' Prints a matrix of data as a human readable table. Matrix
     should be a list of lists containing any type of values that can
     be converted into text strings.

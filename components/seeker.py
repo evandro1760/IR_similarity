@@ -1,14 +1,17 @@
 from model.consult import Consult
 from model.index import Index
 from components.printer import print_table
+from copy import deepcopy as dp
 
 class Seeker:
     
     def __init__(self, index, consult):
-        self.__inverted_file = index.get_if()
-        self.__bowq = consult.get_bowq()
+        self.__index = index
+        self.__consult = consult
+        #self.__inverted_file = index.get_if()
+        #self.__bowq = consult.get_bowq()
 
-    def __list_docs(self,words):
+    def __list_docs(self, words):
         docs = []
         for word in words:
             for doc in words[word]:
@@ -19,9 +22,12 @@ class Seeker:
             
     def make_seek(self):
         tab = {}
-        for word in self.__bowq:
+        #in_fi =  self.__index.get_if()
+        bowq = self.__consult.get_bowq()
+
+        for word in bowq:
             try:
-                tab[word] = self.__inverted_file[word]
+                tab[word] = dp(self.__index.get_word(word))
             except:
                 pass
 
@@ -30,17 +36,27 @@ class Seeker:
 
         for word in tab:
             line = [word]
+            temp = []
             for doc in docs:
                 if(doc not in tab[word]):
                     tab[word][doc] = 0
                 line += [tab[word][doc]]
-            tab[word]['freqq'] = self.__bowq[word]
-            line += [tab[word]['freqq']]
-            show.append(line)
+                name = 'tfidf(' + doc + ')'
+                tab[word][name] = self.__index.get_tfidf(word,doc)
+                temp.append(tab[word][name])
             
-            #print(word,tab[word])
-        
-        print_table(show, header=['Word'] + docs + ['Freqq'], row_line=True, fix_col_width=True)
+            tab[word]['freqq'] = bowq[word]
+            tab[word]['df'] = self.__index.get_df(word)
+            tab[word]['idf'] = self.__index.get_idf(word)
+            
+            line += [tab[word]['freqq'], tab[word]['df'], tab[word]['idf']] + temp
+            show.append(line)
+
+        head = ['Query Words'] + docs + ['Freqq'] + ['DF'] + ['IDF'] + ['tfidf('+doc+')' for doc in docs]
+        #print(head)
+        print_table(show, header = head)
+
+
         
     #def get_ranking(self):        
 

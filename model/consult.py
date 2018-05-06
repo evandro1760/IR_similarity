@@ -11,11 +11,19 @@ class Consult:
 
     def get_querry(self):
         return self.__querry
+    
+    def get_max(self):
+        count = 0
+        for word in self.__bowq:
+            fqq = self.__bowq[word]
+            if(fqq > count):
+                count = fqq
+        return count
 
     def show_consult(self):
-        print('[' + self.__querry + ']')
+        print('[' + self.__querry + ']\n')
         tab = []
         for word in self.__bowq:
-            tab.append([word, self.__bowq[word]]) 
-        print_table(tab, header=['Words', 'Frequency'], row_line=True, fix_col_width=True)
+            tab.append([word, self.__bowq[word]])
+        print_table(tab, header=['Query Words', 'Frequency'])
 

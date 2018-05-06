@@ -7,7 +7,9 @@ sw = ['']
 for i in open('stopwords.txt','r').readlines():
     sw.append(i.replace('\n','').replace(' ','').lower())
 
-tp = Textprocessor('boi cavalo peão boi', sw)
+query = 'boi cavalo peão boi'
+
+tp = Textprocessor(query, sw)
 tp.get_consult().show_consult()
 
 print('')
