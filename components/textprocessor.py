@@ -3,15 +3,16 @@ from model.consult import Consult
 
 class Textprocessor:
 
-    def __init__(self, querry, stopwords):
+    def __init__(self, stopwords):
+        self.__sw = stopwords
+        
+    def build_consult(self, query):
         bowq = {}
-        line = re.sub(r'[-./?!,":;()\']',' ', querry.lower())
+        line = re.sub(r'[-./?!,":;()\']',' ', query.lower())
         for word in line.split(' '):
-            if(word not in stopwords):
+            if(word not in self.__sw):
                 if(word not in bowq):
                     bowq[word] = 0
                 bowq[word] += 1
-        self.__consult = Consult(querry, bowq)
-        
-    def get_consult(self):
-        return self.__consult
+        consult = Consult(query, bowq)
+        return consult

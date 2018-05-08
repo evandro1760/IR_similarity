@@ -5,12 +5,9 @@ from copy import deepcopy as dp
 
 class Seeker:
     
-    def __init__(self, index, consult):
+    def __init__(self, index):
         self.__index = index
-        self.__consult = consult
-        #self.__inverted_file = index.get_if()
-        #self.__bowq = consult.get_bowq()
-
+    
     def __list_docs(self, words):
         docs = []
         for word in words:
@@ -20,10 +17,9 @@ class Seeker:
         return docs
 
             
-    def make_seek(self):
+    def make_seek(self, consult):
         tab = {}
-        #in_fi =  self.__index.get_if()
-        bowq = self.__consult.get_bowq()
+        bowq = consult.get_bowq()
 
         for word in bowq:
             try:

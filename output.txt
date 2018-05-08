@@ -9,21 +9,21 @@ boi                  | 2
 cavalo               | 1                   
 ==================== | ====================
 
-rodeio      1           fazenda.txt 1          
 laçou       1           rodeio.txt  1          
-xadrez      2           xadrez.txt  1           policia.txt 1          
-cavalo      2           fazenda.txt 1           xadrez.txt  2          
-peão        3           xadrez.txt  1           jogo.txt    1           rodeio.txt  1          
-envolveu    1           jogo.txt    1          
-jogo        1           xadrez.txt  1          
 melhor      1           xadrez.txt  1          
-rei         1           jogo.txt    1          
-policiais   1           policia.txt 1          
-jogaram     1           policia.txt 1          
+rodeio      1           fazenda.txt 1          
 peças       1           xadrez.txt  1          
 jogada      1           jogo.txt    1          
-boi         1           rodeio.txt  1          
+rei         1           jogo.txt    1          
+cavalo      2           xadrez.txt  2           fazenda.txt 1          
+peão        3           xadrez.txt  1           jogo.txt    1           rodeio.txt  1          
+jogaram     1           policia.txt 1          
+jogo        1           xadrez.txt  1          
 torre       1           jogo.txt    1          
+boi         1           rodeio.txt  1          
+xadrez      2           xadrez.txt  1           policia.txt 1          
+envolveu    1           jogo.txt    1          
+policiais   1           policia.txt 1          
 
 Query Words          | fazenda.txt          | jogo.txt             | rodeio.txt           | xadrez.txt           | Freqq                | DF                   | IDF                  | tfidf(fazenda.txt)   | tfidf(jogo.txt)      | tfidf(rodeio.txt)    | tfidf(xadrez.txt)   
 ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ==================== | ====================

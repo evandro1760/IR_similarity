@@ -5,8 +5,14 @@ class Index:
 
     def __init__(self):
         self.__inverted_file = {}
+        self.__vm = {}
+        self.__docs = []
+
+    def add_docs(self, docs):
+        self.__docs = docs
 
     def __add_word(self, word):
+        self.__vm[word] = {x:0 for x in self.__docs}
         self.__inverted_file[word] = {}
 
     def add_term_frequency(self, word, doc):
@@ -37,7 +43,7 @@ class Index:
     def get_idf(self, word):
         return log10(self.get_N() / self.get_df(word))
     
-    def get_max(self, doc):
+    def get_max_freq(self, doc):
         count = 0
         for word in self.__inverted_file:
             try:
@@ -53,7 +59,11 @@ class Index:
             num = self.__inverted_file[word][doc]
         except:
             return 0
-        return (num / self.get_max(doc)) * self.get_idf(word)
+        return (num / self.get_max_freq(doc)) * self.get_idf(word)
+    
+    #def get_vetorial_model(self):
+        
+
     
     def show_index(self):
         tab = []
