@@ -23,7 +23,7 @@ indexer.get_index().show_index()
 
 
 teste = Seeker(indexer.get_index())
-teste.make_seek(consult)
+#teste.make_seek(consult)
 
 
 

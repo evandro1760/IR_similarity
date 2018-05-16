@@ -1,22 +1,35 @@
 from model.consult import Consult
 from model.index import Index
-from components.printer import print_table
+from components.printer import print_table, print_model
 from copy import deepcopy as dp
+from math import log10
 
 class Seeker:
     
     def __init__(self, index):
         self.__index = index
+        self.__vm = {}
+        self.__IFtoVM()
     
-    def __list_docs(self, words):
-        docs = []
-        for word in words:
-            for doc in words[word]:
-                if(doc not in docs):
-                    docs.append(doc)
-        return docs
+    def __IFtoVM(self):
+        ifile = self.__index.get_ifile()
+        docs = self.__index.get_docs()
+        
+        for word in ifile:
+            self.__vm[word] = {}
 
-            
+            self.__vm[word]['DF'] = len(ifile[word])
+            self.__vm[word]['iDF'] = log10(len(docs) / self.__vm[word]['DF'])
+
+            for doc in docs:
+                try:
+                    self.__vm[word][doc] = ifile[word][doc]
+                except:
+                    self.__vm[word][doc] = 0
+                
+                self.__vm[word]['tfidf('+doc+')'] = (self.__vm[word][doc] / docs[doc]) * self.__vm[word]['iDF']
+        print_model(self.__vm, docs)
+"""
     def make_seek(self, consult):
         tab = {}
         bowq = consult.get_bowq()
@@ -51,9 +64,7 @@ class Seeker:
         head = ['Query Words'] + docs + ['Freqq'] + ['DF'] + ['IDF'] + ['tfidf('+doc+')' for doc in docs]
         #print(head)
         print_table(show, header = head)
-
-
-        
+"""     
     #def get_ranking(self):        
 
         

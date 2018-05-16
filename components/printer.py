@@ -126,3 +126,16 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
     # --------------- | --------------- | ---------------
     # 1               | 1               | 1              
     # =============== | =============== | ===============
+
+def print_model(dic, docs):
+    cab = list(docs.keys())
+    cab = ['Word'] + cab + ['DF', 'iDF'] + ['tfidf('+x+')' for x in cab]
+    lines = []
+    for word in dic:
+        line = []
+        line.append(word)
+        line += [dic[word][cab[x]] for x in range(1,len(cab))]
+        lines.append(line)
+    print_table(lines, header = cab)
+    
+

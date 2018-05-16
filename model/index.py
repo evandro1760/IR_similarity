@@ -1,31 +1,31 @@
 from components.printer import PrettyPrint
-from math import log10
 
 class Index:
 
     def __init__(self):
         self.__inverted_file = {}
-        self.__vm = {}
-        self.__docs = []
-
-    def add_docs(self, docs):
-        self.__docs = docs
-
-    def __add_word(self, word):
-        self.__vm[word] = {x:0 for x in self.__docs}
-        self.__inverted_file[word] = {}
+        self.__docs = {}
 
     def add_term_frequency(self, word, doc):
         if(word not in self.__inverted_file):
-            self.__add_word(word)
+            self.__inverted_file[word] = {}
+
+        if(doc not in self.__docs):
+            self.__docs[doc] = 0
+
         if(doc not in self.__inverted_file[word]):
             self.__inverted_file[word][doc] = 0    
         
         self.__inverted_file[word][doc] += 1
+        self.__docs[doc] += 1
 
-    def get_if(self):
+    def get_ifile(self):
         return self.__inverted_file
     
+    def get_docs(self):
+        return self.__docs
+    
+    """
     def get_word(self,word):
         return self.__inverted_file[word]
 
@@ -64,7 +64,7 @@ class Index:
     #def get_vetorial_model(self):
         
 
-    
+    """
     def show_index(self):
         tab = []
         for word in self.__inverted_file:
