@@ -1,5 +1,6 @@
 import re
 from model.consult import Consult
+from components.preprocessor import Preprocessor
 
 class Textprocessor:
 
@@ -8,8 +9,8 @@ class Textprocessor:
         
     def build_consult(self, query):
         bowq = {}
-        line = re.sub(r'[-./?!,":;()\']',' ', query.lower())
-        for word in line.split(' '):
+        line = Preprocessor()
+        for word in line.lineToarray(query):
             if(word not in self.__sw):
                 if(word not in bowq):
                     bowq[word] = 0
