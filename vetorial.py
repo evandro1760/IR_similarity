@@ -13,16 +13,19 @@ query = 'boi cavalo peão boi'
 
 tp = Textprocessor(sw)
 consult = tp.build_consult(query)
+consult.normalize_frequences()
 consult.show_consult()
 
 print('')
 
 indexer = Indexer(sw)
 indexer.load_inverted_index()
-indexer.get_index().show_index()
+indexer.get_index().show_inverted_file()
 
 
 teste = Seeker(indexer.get_index())
+teste.make_seek(consult)
+
 #teste.make_seek(consult)
 
 

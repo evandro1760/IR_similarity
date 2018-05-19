@@ -1,23 +1,44 @@
 from components.printer import PrettyPrint
+from model.vector import Vector
+from math import log10
 
 class Index:
 
     def __init__(self):
         self.__inverted_file = {}
-        self.__docs = {}
+        self.__docs_vectors = {}
 
-    def add_term_frequency(self, word, doc):
+    def normalize_doc_freq(self, doc):
+        self.__docs_vectors[doc].normalize_frequences()
+
+    def update_file_vector(self, term, doc):
+        try:
+            self.__docs_vectors[doc].add_term_freq(term)
+        except:
+            vec = Vector(doc)
+            vec.add_term_freq(term)
+            self.__docs_vectors[doc] = vec
+
+    def get_docs_vectors(self, term):
+        docs = list(self.__inverted_file[term].keys())
+        docs_vectors = {}
+        for doc in docs:
+            docs_vectors[doc] = self.__docs_vectors[doc]
+        return docs_vectors
+
+    def get_idf(self, term):
+        idf = len(self.__docs_vectors) / len(self.__inverted_file[term])
+        idf = log10(idf)
+        return idf
+
+    def add_tf_inverted_file(self, word, doc):
         if(word not in self.__inverted_file):
             self.__inverted_file[word] = {}
-
-        if(doc not in self.__docs):
-            self.__docs[doc] = 0
 
         if(doc not in self.__inverted_file[word]):
             self.__inverted_file[word][doc] = 0    
         
         self.__inverted_file[word][doc] += 1
-        self.__docs[doc] += 1
 
     def get_ifile(self):
         return self.__inverted_file
@@ -65,7 +86,7 @@ class Index:
         
 
     """
-    def show_index(self):
+    def show_inverted_file(self):
         tab = []
         for word in self.__inverted_file:
             line = [word, str(len(self.__inverted_file[word]))]

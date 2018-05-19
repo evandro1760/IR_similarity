@@ -18,7 +18,9 @@ class Indexer:
             for word in doc.get_content():
                 if(word not in self.__sw):
                     w = self.__process_word(word)
-                    self.__index.add_term_frequency(w, doc.get_name())
-        
+                    self.__index.add_tf_inverted_file(w, doc.get_name())
+                    self.__index.update_file_vector(w, doc.get_name())
+            self.__index.normalize_doc_freq(doc.get_name())
+
     def get_index(self):        
         return self.__index

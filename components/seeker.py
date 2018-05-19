@@ -2,33 +2,71 @@ from model.consult import Consult
 from model.index import Index
 from components.printer import print_table, print_model
 from copy import deepcopy as dp
-from math import log10
+from math import log10, sqrt
 
 class Seeker:
     
     def __init__(self, index):
         self.__index = index
-        self.__vm = {}
-        self.__IFtoVM()
     
-    def __IFtoVM(self):
-        ifile = self.__index.get_ifile()
-        docs = self.__index.get_docs()
+    def calc_vector_mod(self, vector):
+        mod = 0
+        for c in vector:
+            mod += (vector[c] * vector[c])
+        return sqrt(mod)
+    
+
+    def calc_sim(self, tfidf, consult_w):
+        num = 0
         
-        for word in ifile:
-            self.__vm[word] = {}
+        mod_consult = self.calc_vector_mod(consult_w)
+        mod_doc = self.calc_vector_mod(tfidf)
 
-            self.__vm[word]['DF'] = len(ifile[word])
-            self.__vm[word]['iDF'] = log10(len(docs) / self.__vm[word]['DF'])
+        den = mod_consult * mod_doc
 
-            for doc in docs:
-                try:
-                    self.__vm[word][doc] = ifile[word][doc]
-                except:
-                    self.__vm[word][doc] = 0
-                
-                self.__vm[word]['tfidf('+doc+')'] = (self.__vm[word][doc] / docs[doc]) * self.__vm[word]['iDF']
-        print_model(self.__vm, docs)
+        for term in consult_w:
+            try:
+                num += (tfidf[term] * consult_w[term])
+            except:
+                num += 0
+
+        return num/den
+    
+    def make_seek(self, consult):
+        similarities = {}
+        related_docs = {}
+        terms = list(consult.get_bowq().keys())
+
+        # buscando os docs relacionados à query, pelo arquivo invertido
+        for term in terms:
+            vectors = self.__index.get_docs_vectors(term)
+            for vec in vectors: # se vem doc repetido, sobrescreve
+                related_docs[vec] = vectors[vec]
+
+
+        # calculando os pesos para a consulta
+        consult_tfs = consult.normalize_frequences()
+        consult_w = {}
+        for term in consult_tfs:
+                consult_w[term] = consult_tfs[term] * self.__index.get_idf(term)
+            
+
+        # para cada doc, calculando os vetores com os pesos (tfidf)
+        for doc in related_docs:
+            pre_vector = related_docs[doc].get_normalized_vector()
+            tfidf = {}
+            for term in pre_vector:
+                tfidf[term] = pre_vector[term] * self.__index.get_idf(term)
+            #pre_vector.set_tfidf(tfidf)
+            related_docs[doc] = pre_vector
+            similarities[doc] = self.calc_sim(tfidf, consult_w)
+
+        for sim in similarities:
+            print(sim, " ", similarities[sim])
+
+
+        
+
 """
     def make_seek(self, consult):
         tab = {}

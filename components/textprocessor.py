@@ -9,8 +9,8 @@ class Textprocessor:
         
     def build_consult(self, query):
         bowq = {}
-        line = Preprocessor()
-        for word in line.lineToarray(query):
+        p = Preprocessor()
+        for word in p.lineToarray(query):
             if(word not in self.__sw):
                 if(word not in bowq):
                     bowq[word] = 0
