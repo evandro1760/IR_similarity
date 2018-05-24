@@ -43,10 +43,10 @@ class Index:
     def get_ifile(self):
         return self.__inverted_file
     
+    """
     def get_docs(self):
         return self.__docs
     
-    """
     def get_word(self,word):
         return self.__inverted_file[word]
 

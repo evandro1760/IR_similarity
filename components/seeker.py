@@ -1,6 +1,6 @@
 from model.consult import Consult
 from model.index import Index
-from components.printer import print_table, print_model
+from components.printer import *
 from copy import deepcopy as dp
 from math import log10, sqrt
 
@@ -43,15 +43,16 @@ class Seeker:
             for vec in vectors: # se vem doc repetido, sobrescreve
                 related_docs[vec] = vectors[vec]
 
-
         # calculando os pesos para a consulta
         consult_tfs = consult.normalize_frequences()
         consult_w = {}
         for term in consult_tfs:
-                consult_w[term] = consult_tfs[term] * self.__index.get_idf(term)
+            consult_w[term] = consult_tfs[term] * self.__index.get_idf(term)
             
-
         # para cada doc, calculando os vetores com os pesos (tfidf)
+        ###
+        docs_tfidf = {}
+        ###
         for doc in related_docs:
             pre_vector = related_docs[doc].get_normalized_vector()
             tfidf = {}
@@ -59,8 +60,21 @@ class Seeker:
                 tfidf[term] = pre_vector[term] * self.__index.get_idf(term)
             #pre_vector.set_tfidf(tfidf)
             related_docs[doc] = pre_vector
-            similarities[doc] = self.calc_sim(tfidf, consult_w)
 
+            ###
+            docs_tfidf[doc] = tfidf
+
+            for i in tfidf:
+                print(doc, ' - ',i,' - ',tfidf[i])
+            ###
+
+            similarities[doc] = self.calc_sim(tfidf, consult_w)
+        
+        ###
+        print_consult(consult, consult_w)
+        ###
+
+        print('')
         for sim in similarities:
             print(sim, " ", similarities[sim])
 

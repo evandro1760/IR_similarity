@@ -4,7 +4,10 @@ class Vector:
         self.__vector = {}
         self.__normalized_vector = {}
         self.__max_freq = 0
+
+        ##MUDAR
         self.__alfa = 0.5
+
         self.__name = name
         self.__tfidf = {}
 

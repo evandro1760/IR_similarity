@@ -127,9 +127,21 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
     # 1               | 1               | 1              
     # =============== | =============== | ===============
 
+def print_consult(consult, consult_w):
+    print('[' + consult.get_query() + ']\n')
+    tab = []
+    bowq = consult.get_bowq()
+    
+    for word in bowq:
+        tab.append([word, bowq[word], consult_w[word]])
+    
+    print_table(tab, header=['Query Words', 'Frequency', 'Weight'])
+
+#def print_vetorial_model():
+
 def print_model(dic, docs):
     cab = list(docs.keys())
-    cab = ['Word'] + cab + ['DF', 'iDF'] + ['tfidf('+x+')' for x in cab]
+    cab = ['Word'] + cab + ['DF', 'iDF'] + ['tfidf('+x+')' for x in cab] + ['W']
     lines = []
     for word in dic:
         line = []
@@ -137,5 +149,6 @@ def print_model(dic, docs):
         line += [dic[word][cab[x]] for x in range(1,len(cab))]
         lines.append(line)
     print_table(lines, header = cab)
+
     
 

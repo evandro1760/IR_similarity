@@ -24,9 +24,8 @@ indexer.get_index().show_inverted_file()
 
 
 teste = Seeker(indexer.get_index())
-teste.make_seek(consult)
 
-#teste.make_seek(consult)
+teste.make_seek(consult)
 
 
 
