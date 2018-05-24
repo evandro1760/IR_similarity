@@ -30,7 +30,8 @@ class Seeker:
                 num += (tfidf[term] * consult_w[term])
             except:
                 num += 0
-
+        if(den == 0):
+            return 0
         return num/den
     
     def __build_vetorial_model(self):

@@ -15,6 +15,8 @@ indexer = Indexer(sw)
 indexer.load_inverted_index()
 index = indexer.get_index()
 
+teste = Seeker(index)
+
 while(True):
     query = input("Entre com uma consulta:\n")
     if(query == ''):
@@ -25,8 +27,6 @@ while(True):
     consult = tp.build_consult(query)
     consult.normalize_frequences()
 
-    teste = Seeker(index)
+    #teste = Seeker(index)
     teste.make_seek(consult, alfa)
-
-
 

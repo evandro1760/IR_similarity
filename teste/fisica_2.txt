@@ -1,0 +1,11 @@
+Equilíbrio de Corpos Extensos
+Equilíbrio de corpos extensos se refere a corpos que possuem dimensões e, portanto, quando está em movimento ele pode transladar e rotacionar ao mesmo tempo. Um exemplo do dia a dia é uma bola de futebol que ao receber um chute de um jogador ela translada e rotaciona, seja em um lançamento aéreo ou rasteiro.
+As Grandezas Físicas no Futebol
+As Grandezas físicas no futebol estão presentes nos jogos e, portanto, na Copa do Mundo    ( World Cup), que é o evento mais esperado por todos do planeta e que acontece de 4 em 4 anos. A vigésima primeira edição deste evento será disputada na Rússia em 2018.
+Como calcular Capacidade e Volume
+Capacidade e Volume
+Todo corpo ocupa um espaço com medidas de comprimento, largura e altura e, portanto, ele possui volume.
+
+O volume do cubo da figura 1 é dado por:
+
+V= 1m x 1m x 1m = 1m3

@@ -1,0 +1,11 @@
+Descrição:
+O jogo é baseado na ideia de um ping pong em que devemos rebater a bola.
+Objetivo: rebater a bola e não deixar ela escapar.
+Critério de Vitória Não há critério de vitória , o que está em jogo é a diversão.
+Critério de Derrota deixar a bola escapar até que a vida acabe.Mensagem de K.O. é printada na tela!
+Utilidade de OpenCV utilizei a classe camshiftdemo para fazer o rastreamento do objeto para ser a plataforma
+que rebate a bola no jogo. 
+
+Como se joga: pelo rastreamento do objeto podemos movimentar a plataforma que rebate a bola.Quando a bola
+bate na plataforma ela é rebatida de volta pra cima.Com apenas o movimento do objeto podemos jogar e garantir
+horas de diversão.

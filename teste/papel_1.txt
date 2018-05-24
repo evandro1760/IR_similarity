@@ -1,0 +1,210 @@
+var1=A  presença  da  madeira em nossas vidas é tão íntima que passa despercebida. 
+Devorador voraz de florestas, o homem precisa adquirir  consciência do uso racional desses recursos.
+E, assim, investir no aprimoramento técnico de renovação   dos mesmos.
+Consciente do valor das reservas naturais para o sustento da empresa, a  DALLPEL  mantém áreas de preservação e regeneração de matas nativas e projetos de replantio programado, tornando o reflorestamento auto-sustentável.
+A DALLPEL, fundada em 1990,  nasceu com know-how e tecnologia na área de reflorestamento e processamento de papel, adquiridos  em 80 anos de atividade da Indústria Dallegrave  S/A.
+A DALLPEL, desempenhando importante papel social, gera centenas de empregos direta e indiretamente em seus processos industriais. Também participa ativamente na reciclagem do lixo urbano; 99% da matéria prima utilizada na fabricação do seu papel vem da coleta  seletiva do lixo.
+
+
+
+&var2="DIVISÃO FLORESTAL
+A divisão florestal da DALLPEL está localizada nos municípios de Guarapuava, Inácio Martins, Cruz Machado e Irati, todos no Estado do Paraná.A DALLPEL totaliza 6.267 ha de áreas de manejo florestal, onde estão implantadas florestas homogêneas distribuídas da seguinte forma:
+- Pinus (Pinus elliottis/taeda)               2.400 ha;
+- Araucária (Araucaria angustifolia)            400 ha;
+- Eucaliptos (Eucalyptus viminalis spp)         150 ha.
+O abastecimento das necessidades atuais da empresa está garantido pelos próximos 20 anos, não sendo considerados neste cálculo o incremento anual das florestas, bem como o replantio de 300.000 novas mudas por ano.As unidades de consumo do grupo, fábrica de pasta mecânica e serraria, estão estrategicamente localizadas, a distâncias inferiores a 60 km das áreas de exploração florestal.Estas unidades encontram-se a 250 km da cidade de Curitiba, capital do estado do Paraná e a 330 km dos portos de exportação de Paranaguá e São Francisco.
+Dentro da divisão florestal a  DALLPEL também dispõe de:
+- 1.250 ha de florestas nativas, em estado de preservação, as quais são compostas por pinheiros (Araucária angustifólia), imbuias (Ocotea porosa) e outras espécies em fase de regeneração;
+- 532ha de erva mate (Ilex paraguariensis), tecnicamente conduzida para a industrialização de chá mate e chimarrão;
+- 400 ha de pasto nativo destinado a criação de gado de corte."
+
+
+
+&var3="DIVISÃO MADEIRA
+A divisão de madeira possui sua unidade de beneficia-mento instalada no Município de Guarapuava - PR, a 1.800m da rodovia PR 466.
+Esta divisão conta com modernos equipamentos industriais, e ocupa 4.500m² de área construída. Toda a matéria prima consumida na serraria é fornecida através da divisão florestal do grupo.A serraria possui capacidade de produção de 1.400 m³/mês de madeira de pinus seca em estufa, com 95 % destinada à exportação para os Estados Unidos e Europa, sendo que os principais produtos são:
+- Madeiras serradas;
+- Ripas de cerca- Pallets;
+- Clear blocks;
+- Molduras e painéis;
+- Cavacos combustíveis."
+
+
+
+&var4="DIVISÃO PASTA MECÂNICA
+A divisão pasta mecânica é composta por duas unidades produtivas, as quais são denominadas de fábrica de pasta mecânica do Lageado Grande e do Turvo; as duas fábricas estão instaladas nas imediações do município de Guarapuava - PR e possuem produção conjunta total de 600 ton / mês.
+Toda a matéria prima consumida nas fábricas de pasta provem das fazendas da divisão florestal.
+Os principais produtos gerados nestas unidades são:
+- Pasta  mecânica  branca;
+- Pasta  termomecânica."
+
+
+
+&var5="DIVISÃO PAPEL
+A divisão de papel possui sua fábrica no Município de Irati - PR, às margens da BR 277, rodovia que liga Foz do Iguaçu ao Porto de Paranaguá. Esta divisão conta com parque industrial de 12.000m2 de área construída, sendo constituída de duas linhas principais: papel para embalagem e chapa de papelão ondulado. A linha de papel para embalagem recicla diariamente 80 toneladas de aparas, as quais são transformadas em uma produção mensal de 2.100 ton. Esta produção é retirada em  bobinas de papel com gramaturas que variam de 90 a 200g/m², para os seguintes tipos de papel:
+- Papel miolo;
+- Papel capa;
+- Papel semi-kraft.
+A linha de chapas de papelão ondulado tem capacidade de produção de 800 toneladas/mês, sendo que seus produtos atendem a todas as necessidades dos clientes:
+- Bobina de papelão ondulado;
+- Chapa branca simples;
+- Chapa branca dupla;
+- Chapa capa/miolo simples;
+- Chapa capa/miolo dupla.
+Dominando todo o processo de reciclagem de papel, e com a verticalização da sua linha de produção, a DALLPEL garante a qualidade e a pontualidade na entrega dos seus produtos. Com ampla linha de produtos destinados a confecção de embalagens, para os mais diversos setores, a DALLPEL atende todas as regiões do Brasil, bem como exporta para todos os países do Mercosul."
+
+
+&var6="DIVISÃO MICRO ONDULADO
+Em construção"
+
+
+&var7="DIVISÃO CARTONAGEM
+A divisão cartonagem da DALLPEL está instalada junto à fábrica de papel, no município de Irati -PR.
+A linha de caixas de papelão ondulado tem capacidade para produzir mensalmente 350 toneladas dos mais variados tipos e dimensões de caixas de papelão.  Contando com sistema de impressão que garante excelente acabamento, está capacitada a desenvolver produtos especiais de acordo com a especificação dos mais exigentes clientes."
+
+
+&var11="Wood presence is so embedded  in  our lives that we take it for granted.
+A ravenous forest gobbler, man needs to acquire conscience of those resources. And thus invest in their improvement.
+Conscious of natural resources value for its sustenance, DALLPEL maintains native forest preservation and regeneration areas, and replanting programmed projects, thus making reforestation self-supporting.
+Founded in 1990, DALLPEL was born with the know-how and technology necessary for reforestation and paper processing, acquired during 80 years of Industrias Dallegrave S/A. activity.
+DALLPEL performs an important social role by generating hundreds of direct and indirect jobs in its industrial processes. Furthermore, it also partakes actively in urban garbage recycling. In fact, 99% of the raw materials it uses in papermaking arise from garbage selective pickup."
+
+
+&var12="FOREST DIVISION
+
+DALLPEL forest division is located in the Guarapuava, Inácio Martins, Cruz Machado and Irati districts, all of them in Paraná state.
+It has 6,267 ha of forest management, where the following kinds of trees have been implanted:
+- Pine (Pinus elliottis/taeda)                 2,400 ha;
+- Araucaria (Araucaria angustifolia)             400 ha;
+- Eucalyptus (Eucalyptus viminalis spp)          150 ha.
+
+The present company supply needs are ensured for the next 20 years, taking into consideration neither forest annual increase nor 300,000 yearly seedling planting.
+The group consuming units, such as the mechanical pulp plant and the sawmill, are strategically placed less than 60 km from the wood exploitation areas.
+
+They are located at 250 km from Curitiba, state capital, and 330 km from Paranaguá and São Francisco export harbors.
+Still within the Forest Division, DALLPEL also has:
+- 1,250 ha of preserved native forests composed of araucaria (Araucaria angustifolia), imbuia (Brazilian walnut; Ocotea porosa) and other species undergoing regeneration;
+- 532 ha of mate (Ilex paraguariensis), Paraguayan tea drunk as an infusion from a cup or a gourd;
+- 400 ha of native pasture devoted to cattle raising."
+
+
+&var13="WOOD DIVISION
+
+Wood division industrial unit is located in Guarapuava district, Paraná, 1,800 m from the PR 466 highway.
+It has modern facilities and occupies 4,500 m² of built area.
+Its raw material is entirely supplied by the group forest division.
+The sawmill has a production capacity of 1,400 m³/monthly of oven-dried pinewood, 95% of which is destined for export to the United States and Europe. The main products are: 
+- Sawed wood;
+- Fence beams;
+- Pallets;
+- Clear blocks;
+- Frames and panels;
+- Shavings for fuel."
+
+
+&var14="MECHANICAL PULP DIVISION
+
+The mechanical pulp division is constituted by two industrial units, respectively named Lageado Grande and Turvo mechanical pulp plants. Both are installed in Guarapuava-Paraná, district outskirts, and have a joint production of 600 ton/monthly.
+All raw material consumed by the pulp plants comes from forestal division estates.
+Main products are:
+-  Bleached mechanical pulp
+-  Thermo-mechanical pulp"
+
+
+&var15="PAPER DIVISION
+
+The paper division plant is located in Irati district, on BR 277 highway, which connects Foz de Iguaçu to the port of Paranaguá, all of them in Paraná State.
+Its facilities occupy 12,000 m² of built area, which lodge two main industrial lines: packaging paper and corrugated cardboard.
+The packaging paper line recycles daily 80 tons of trimmings, which are monthly converted into 2,100 tons of product.
+This production is accommodated in bobbins of different 90-200 g/m² types such as:
+-  Medula paper;
+-  Capa paper ;
+-  Semi-kraft paper.
+The corrugated paper sheet line has an 800 tons monthly capacity and its products fill all clients requirements such as: 
+-  Corrugated cardboard bobbins;
+-  Simple bleached;
+-  Double bleached;
+-  Simple capa/medula boards;
+-  Double capa/medula boards.
+By mastering the whole recycling process and with its production line verticalization, DALLPEL guarantees its products quality and timely delivery.
+Its ample and diversified packaging products manufacture line permits DALLPEL to serve all Brazil regions and export to all Mercosul countries. "
+
+
+&var16="MICROONDULADO DIVISION
+In construction"
+
+
+&var17="CARDBOARD DIVISION
+
+DALLPEL cardboard division is installed close to the paper plant in Irati, Paraná, district.
+The corrugated cardboard box line has a monthly capacity of 350 tons of a wide variety of cardboard box types and dimensions. It has a printing system that ensures an excellent finishing and is capable to develop custom made products for the most exacting clients."
+
+
+&var21="La presencia de la madera en nuestras vidas es tan íntima que pasa desapercibida.
+Voraz devorador de bosques, el hombre necesita adquirir conciencia de su uso racional, e invertir en el perfeccionamiento técnico de su renovación.
+Consciente del valor que las reservas naturales tienen para su sustento, DALLPEL mantiene áreas de preservación y regeneración del bosque nativo y proyectos de replantación  programada, tornando así auto-sustentable la reforestación.
+DALLPEL, fundada en 1990, nacióya con el "know-how" y la tecnología en el área de reforestación y procesamiento de papel, producto de 80 años de actividad de la industria Dallegrave S/A.
+DALLPEL desempeña un importante papel social, generando, en sus procesos industriales, centenas de empleos directos e indirectos. También participa activamente en el reciclado  de los residuos urbanos. El 99% de la materia prima utilizada por ella en la fabricación de papel proviene de la recolección selectiva de esos residuos."
+
+
+&var22="DIVISIÓN FORESTAL
+
+La división forestal de DALLPEL está ubicada en los municipios de Guarapuava, Inácio Martins, Cruz Machado e Irati, todos en el estado de Paraná.Totaliza 6.267 ha de tierras de producción forestal, donde están implantados bosques homogéneos que se distribuyen  de la siguiente manera:
+
+- Pinos (Pinus elliottis/taeda)            2.400 ha;
+- Araucarias (Araucaria angustifolia)        400 ha;
+- Eucaliptos (Eucalyptus viminalis spp)      150 ha.
+
+El abastecimiento de las necesidades actuales de la empresa está garantizado por los próximos 20 años, sin tomar en consideración en este cálculo ni el incremento anual de los bosques ni la plantación anual de 300.000  nuevos pies.
+Las unidades de consumo del grupo, tales como la fábrica de pasta mecánica  y el aserradero, están estratégicamente ubicadas a distancias inferiores a 60 km de las áreas de explotación forestal. Ellas distan 250 km de Curitiba, capital del estado de Paraná, y 330 km de los puertos de exportación Paranaguá y São Francisco.
+Dentro de la  división forestal, DALLPEL cuenta también con; 
+- 1.250 ha de bosques nativos en estado de preservación, compuestos de araucarias (Araucaria angustifolia), imbuias (Ocotea porosa) y otras especies en fase de regeneración.
+- 532 ha de yerba mate (Ilex paraguariensis), técnicamente dirigidas a la producción de mate para infusión y cebadura.
+- 400 ha de pastos nativos destinadas a la cría de ganado para consumo."
+
+
+&var23="DIVISIÓN MADERA
+
+La unidad  beneficiadora de la división madera está ubicada en el municipio de Guarapuava, Paraná, a 1.800 m de la carretera PR 466.
+Esta división dispone de moderna maquinaria industrial y ocupa un área construida de 4.500 m². Toda la materia prima consumida en su aserradero proviene de la división forestal del grupo.
+El aserradero tiene una capacidad de producción de 1.400m³/mes de madera de pino seca en estufa , de la cual el 95% se exporta para Estados Unidos y Europa. Los principales productos son:
+- Maderas serradas;
+- Listones para cercos;
+- Pallets;
+- Clear blocks;
+- Tablas y tableros;
+- Virutas combustibles."
+
+
+&var24="DIVISIÓN PASTA MECÁNICA 
+
+La división pasta mecánica está constituida por dos unidades de producción denominadas fábricas de pasta mecánica de Lageado Grande y de Turvo, ambas instaladas en las inmediaciones del municipio de Guarapuava-Paraná, con una producción conjunta de 600 ton/mes.
+Toda la materia prima consumida en ellas proviene de  fincas de la división forestal.
+Sus principales productos son:
+- Pasta mecánica blanca
+- Pasta termomecánica "
+
+
+&var25="DIVISIÓN PAPEL
+
+La fábrica de la división papel está ubicada en el municipio de Irati, Paraná, sobre la carretera BR 277, que comunica  Foz de Iguazu al puerto de Paranaguá. Las instalaciones de esa división comprenden 12.000 m² de área cubierta y tienen dos líneas principales: papel para embalaje y cartón corrugado. La línea de papel para embalaje recicla diariamente 80 toneladas de recortes, que son transformadas en una producción mensual de 2.100 ton.
+Esta producción es acondicionada en bobinas de papel de 90-200 g/m², para los siguientes tipos de papel :  
+- Papel médula;
+- Papel capa;
+- Papel semi-kraft.
+La línea de láminas de cartón corrugado posee una capacidad de producción de 800 ton/mes, y sus productos atienden todas las necesidades de los clientes: 
+ - Bobina de cartón corrugado;
+ - Chapa blanca simple;
+ - Chapa blanca doble;
+ - Chapa capa/médula simple;
+ - Chapa capa/médula doble.
+Dominando todo el proceso de reciclado de papel, y con la verticalización de su línea de producción, DALLPEL garantiza  calidad y puntualidad en la entrega de sus productos. Con una amplia línea de productos destinados a la confección de embalajes para los más diversos sectores, DALLPEL atiende todas las regiones de Brasil y también exporta para todos los países del Mercosur."
+
+
+&var26=" DIVISIÓN MICROCARTÓN
+En construción"
+
+
+&var27="DIVISIÓN CARTÓN
+
+La división cartón de DALLPEL está instalada junto a la fábrica de papel en el municipio de Irati, Paraná. La línea de cajasdecartón corrugado  tiene una capacidad de 350 ton/mes de cajas de cartón de los más diversos tipos y dimensiones. Dispone de un sistema de impresión que garantiza una terminación excelente y está capacitada para desarrollar productos especiales, de acuerdo con las especificaciones de su clientela más exigente."

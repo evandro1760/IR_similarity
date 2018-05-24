@@ -1,0 +1,43 @@
+   Iniciaremos o curso com uma breve revisão de Relatividade Restrita e
+os processos históricos que originaram a sua formulação, o principal deles,
+a necessidade de se enquadrar o eletromagnetismo dentro de um Princípio de
+Relatividade. Serão então introduzidas as noções de espaço-tempo e
+tensores quadri-dimensionais, com ênfase no tensor momento-energia, e
+mostraremos como leis de conservação aparentemente independentes podem ser
+unificadas num único quadro formal, exibindo a estrutura matemática mais
+simples da Relatividade Restrita em relação à física newtoniana.
+   Em seguida, mostraremos que o enquadramento da gravitação ao Princípio
+da Relatividade envolve enormes dificuldades, não podendo ser implementado
+sem a utilização de espaços-tempos curvos. Consequentemente, introduziremos
+noções básicas de geometria diferencial (variedades, derivada de Lie, transporte
+paralelo, tensor métrico, simetrias e curvatura).
+   Munidos do arsenal técnico necessário, será possível mostrar como foi
+construída a Teoria Relatividade Geral (TRG), a mais elegante teoria física
+jamais elaborada. Enunciaremos os princípios que nortearam Einstein na sua
+formulação: os princípios de Mach, Invariância Geral, Equivalência, Correspondência
+e Covariância Geral. Exibiremos as equações de Einstein da gravitação onde
+fica claro que uma fonte material encurva o espaço-tempo ao seu redor: o tensor
+momento-energia da fonte é diretamente proporcional a determinadas componentes
+da curvatura do espaço-tempo na sua vizinhança.
+   Mostraremos as consequências observacionais da TRG que até hoje têm sido
+confirmadas pelas observações: desvio da luz ao passar pelo Sol, avanço do
+perihélio de Mercúrio e o teste mais moderno e extremamente preciso da coalescência
+do pulsar binário, uma confirmação espantosa da Relatividade Geral na vizinhança
+de regiões onde a densidade de matéria chega a um bilhão de toneladas por
+centímetro cúbico!
+   A seguir, apresentaremos alguns tópicos mais avançados relacionados à TRG.
+Examinaremos evolução estelar à luz desta teoria e mostraremos porque dentro
+da TRG é possível a existência de buracos negros. Discutiremos estes objetos,
+suas propriedades, a noção de horizonte de eventos, a singularidade central e
+objetos relacionados, como os buracos de minhoca. A seguir apresentaremos as
+ondas gravitacionais, que poderão ser observadas num futuro próximo e que
+abrirão uma nova janela para o Universo. Serão também apresentadas noções
+básicas de Cosmologia baseada na TRG, os sucessos do modelo padrão cosmológico
+e seus problemas.
+   Finalmente, discutiremos os limites da Relatividade Geral, quase todos
+relacionados à sua difícil adequação à Mecânica Quântica. Discutiremos o
+paradoxo da informação nos buracos negros, a existência de singularidades
+do espaço-tempo em vários setores da TRG e as grandes dificuldaddes de se
+construir uma teoria quântica da gravitação. Apresentaremos algumas tentativas
+de resposta a essas questões que estão entre as mais importantes da física
+teórica na atualidade.

@@ -1,0 +1,113 @@
+LISTAVOX - Manual de operação
+
+1 - Introdução
+
+    O Listavox é um programa de impressão de texto não formatado.
+
+    Neste programa, o texto a ser impresso é jogado  na  impressora,  sem
+interpretação  de  qualquer  controle.  Apesar  disso,  realiza  algumas 
+operações básicas de embelezamento:
+
+    . estabelece uma margem esquerda e direita no papel, impedindo que
+      o texto saia da área legível razoável.
+    . respeita os limites superior e inferior do papel
+    . pode colocar um título e numerar as páginas
+
+    O programa escolhe um tamanho de letra conveniente de acordo com número 
+selecionado de linhas e colunas do papel, permitindo assim, uma ampla gama 
+de tamanhos de letras.  Essa funcionalidade é útil, por exemplo, para 
+impressão para visão subnormal.
+
+    O programa de impressão assume que os textos estão criados no código 
+internacional (ANSI Windows ou ECMA-Latin 1).
+
+    O programa pula para a próxima página quando encontra uma linha que
+contenha apenas os 3 caracteres <p>.
+
+2 - Configuração
+
+    Após o nome do arquivo a ser impresso é perguntado ao usuário se deseja
+as configurações padrão.
+
+    Caso não seja escolhido os valores padrões, será feita uma série de 
+perguntas que estão relacionadas abaixo.
+
+
+Deseja numeração de página ?
+
+. Caso seja teclado (S), será impresso o número da páginas.
+
+
+Quantas cópias ?
+
+. Deve-se entrar com o número de cópias a serem impressas.
+
+
+Página inicial a imprimir (assumo 1) ?
+
+. Se desejar que a impressão comece da página 1, basta teclar (s). Caso
+contrário, basta digitar o número da página de onde a impressão deve começar.
+
+
+Página final a imprimir (assumo 9999) ?
+
+. Se desejar que a impressão termine na última página ou na 9999 caso haja mais
+páginas, basta teclar (s). Caso contrário, basta digitar o número da última 
+página a ser impressa.
+
+
+Número a imprimir na página inicial (assumo 1) ?
+
+. Digite o número a imprimir na primeira página, as páginas seguintes seguiram 
+uma sucessão. Caso o número da primeira página seja (1), basta teclar (s).
+
+
+Deseja trocar impressora padrão do dosvox ?
+
+. Se desejar, teclar (s), será apresentada uma lista com todas as impressoras
+instaladas. Basta, então, digitar o número da impressora desejada.
+
+
+Deseja configurar padrões físicos de impressão ?
+
+Obs.: a impressora tem um padrão físico, numero de linhas e colunas.
+As impressoras no brasil vem configuradas como carta ou A4, o windows
+respeita a configuração atual da impressora.
+
+
+. Se for escolhida n, serão feitas uma série de perguntas sobre a configuração
+física da impressora.
+
+      Quantas colunas tem o papel ( geralmente 80 ) ?
+      
+      . Deve-se entrar com o número de caracteres que o papel pode ter em cada linha.
+
+
+      Quantas linhas tem o papel ( geralmente 66 ) ?
+
+      . Deve-se digitar o número de linhas que caberão em cada folha.
+
+
+      Primeira linha a imprimir ( geralmente 3) ?
+
+      . Deve-se entrar com a margem superior.
+
+      
+      Última linha a imprimir ( geralmente 62) ?
+      . Deve-se entrar com a margem inferior.
+
+     
+      Primeira coluna a imprimir (geralmente 8) ?
+      . Deve-se entrar com a margem esquerda.
+
+
+      Última coluna a imprimir (geralmente 72) ?
+      . Deve-se entrar com a margem direita.
+
+
+Guardo esses valores como novos padrões ?
+
+    Os valores padrões para a configuração desse programa estão no arquivo
+\windows\dosvox.ini.  Se for digitado (s), esses valores serão salvos no 
+\windows\dosvox.ini e serão os novos valores padrões. 
+Caso seja digitado (n), esses valores só servirão para a impressão atual.
