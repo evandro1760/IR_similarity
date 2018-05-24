@@ -22,7 +22,7 @@ def PrettyPrint(table, justify = "R", columnWidth = 0):
             elif justify == "C": # justify center
                 rowList.append(str(col).center(columnWidth))
         outputStr += ' '.join(rowList) + "\n"
-    print(outputStr)
+    #print(outputStr)
     return outputStr
 
 def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wrap", row_line=True, fix_col_width=True):
@@ -43,7 +43,7 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
     https://gist.github.com/jhcepas/5884168
     
     '''
-        
+    total = ''    
     if fix_col_width:
         c2maxw = dict([(i, max_col_width) for i in range(len(items[0]))])
         wrap = True
@@ -86,10 +86,12 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
                     val = val[:wrap_width]
             val = val.ljust(cwidth)
             values.append(val)
-        print(' | '.join(values))
+        #print(' | '.join(values))
+        total += (' | '.join(values)) + '\n'
         if not set(extra_line) - set(['']):
             if header and current_item == -1:
-                print(' | '.join(['='*c2maxw[col] for col in range(len(row)) ]))
+                #print(' | '.join(['='*c2maxw[col] for col in range(len(row)) ]))
+                total += (' | '.join(['='*c2maxw[col] for col in range(len(row)) ])) + '\n'
             current_item += 1
             try:
                 row = items[current_item]
@@ -101,9 +103,12 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
 
         if row_line and not is_extra and not (header and current_item == 0):
             if row:
-                print(' | '.join(['-'*c2maxw[col] for col in range(len(row)) ]))
+                #print(' | '.join(['-'*c2maxw[col] for col in range(len(row)) ]))
+                total += (' | '.join(['-'*c2maxw[col] for col in range(len(row)) ])) + '\n'
             else:
-                print(' | '.join(['='*c2maxw[col] for col in range(len(extra_line)) ]))
+                #print(' | '.join(['='*c2maxw[col] for col in range(len(extra_line)) ]))
+                total += (' | '.join(['='*c2maxw[col] for col in range(len(extra_line)) ])) + '\n'
+    return total
 
                 
     #print_table([[3,2, {"whatever":1, "bla":[1,2]}], [5,"this is a test\n             of wrapping text\n  with the new function",777], [1,1,1]],
@@ -128,27 +133,11 @@ def print_table(items, header=None, wrap=True, max_col_width=20, wrap_style="wra
     # =============== | =============== | ===============
 
 def print_consult(consult, consult_w):
-    print('[' + consult.get_query() + ']\n')
+    cab = '\n[' + consult.get_query() + ']\n\n'
     tab = []
     bowq = consult.get_bowq()
     
     for word in bowq:
         tab.append([word, bowq[word], consult_w[word]])
     
-    print_table(tab, header=['Query Words', 'Frequency', 'Weight'])
-
-#def print_vetorial_model():
-
-def print_model(dic, docs):
-    cab = list(docs.keys())
-    cab = ['Word'] + cab + ['DF', 'iDF'] + ['tfidf('+x+')' for x in cab] + ['W']
-    lines = []
-    for word in dic:
-        line = []
-        line.append(word)
-        line += [dic[word][cab[x]] for x in range(1,len(cab))]
-        lines.append(line)
-    print_table(lines, header = cab)
-
-    
-
+    return cab + print_table(tab, header=['Query Words', 'Frequency', 'Weight'])

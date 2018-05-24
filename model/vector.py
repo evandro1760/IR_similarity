@@ -1,12 +1,11 @@
 class Vector:
 
-    def __init__(self, name):
+    def __init__(self, name = ''):
         self.__vector = {}
         self.__normalized_vector = {}
         self.__max_freq = 0
 
         ##MUDAR
-        self.__alfa = 0.5
 
         self.__name = name
         self.__tfidf = {}
@@ -33,16 +32,15 @@ class Vector:
             self.__vector[term] = 1
         if(self.__max_freq < self.__vector[term]):
             self.__max_freq = self.__vector[term]
+    
+    def get_terms(self):
+        return list(self.__vector.keys())
 
-    def set_alfa(self, alfa):
-        self.__alfa = alfa
-
-    def normalize_frequences(self, is_consult = False):
+    def normalize_frequences(self, is_consult = False, alfa = 0.5):
         for term in self.__vector:
             if(not is_consult):
                 self.__normalized_vector[term] = self.__vector[term] / self.__max_freq
             else:
-                self.__normalized_vector[term] = self.__alfa + (self.__alfa * (self.__vector[term] / self.__max_freq))
-                
+                self.__normalized_vector[term] = alfa + (alfa * (self.__vector[term] / self.__max_freq))
                     
         return self.__normalized_vector

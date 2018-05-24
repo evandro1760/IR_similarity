@@ -6,7 +6,7 @@ class Consult:
     def __init__(self, querry, bowq):
         self.__querry = querry
         self.__bowq = bowq
-        self.__vector = Vector("_query")
+        self.__vector = Vector()
         for term in self.__bowq:
             for i in range(self.__bowq[term]):
                 self.add_term_freq(term)
@@ -16,28 +16,19 @@ class Consult:
 
     def get_query(self):
         return self.__querry
-    
-    """
-    def get_max(self):
-        count = 0
-        for word in self.__bowq:
-            fqq = self.__bowq[word]
-            if(fqq > count):
-                count = fqq
-        return count
-    """
 
+    def get_terms(self):
+        return list(self.__bowq.keys())
+    
     def add_term_freq(self, term):
         self.__vector.add_term_freq(term)
         
-    def normalize_frequences(self):
-        return self.__vector.normalize_frequences(True)
-
-    #def show_consult_vector(self):
+    def normalize_frequences(self, alfa = 0.5):
+        return self.__vector.normalize_frequences(True, 0.5)
 
     def show_consult(self):
-        print('[' + self.__querry + ']\n')
+        cab = '[' + self.__querry + ']\n\n'
         tab = []
         for word in self.__bowq:
             tab.append([word, self.__bowq[word]])
-        print_table(tab, header=['Query Words', 'Frequency'])
+        return cab + print_table(tab, header=['Query Words', 'Frequency']) + '\n'

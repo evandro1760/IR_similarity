@@ -3,24 +3,25 @@ from model.index import Index
 from components.printer import *
 from copy import deepcopy as dp
 from math import log10, sqrt
+from components.ranking import Ranking
+from datetime import datetime
 
 class Seeker:
     
     def __init__(self, index):
         self.__index = index
+        self.__build_vetorial_model()
     
-    def calc_vector_mod(self, vector):
+    def __calc_vector_mod(self, vector):
         mod = 0
         for c in vector:
             mod += (vector[c] * vector[c])
         return sqrt(mod)
-    
 
-    def calc_sim(self, tfidf, consult_w):
-        num = 0
-        
-        mod_consult = self.calc_vector_mod(consult_w)
-        mod_doc = self.calc_vector_mod(tfidf)
+    def __calc_sim(self, tfidf, consult_w):
+        num = 0        
+        mod_consult = self.__calc_vector_mod(consult_w)
+        mod_doc = self.__calc_vector_mod(tfidf)
 
         den = mod_consult * mod_doc
 
@@ -32,92 +33,48 @@ class Seeker:
 
         return num/den
     
-    def make_seek(self, consult):
-        similarities = {}
-        related_docs = {}
-        terms = list(consult.get_bowq().keys())
+    def __build_vetorial_model(self):
+        docs = self.__index.fetchall_docs_vectors()
 
-        # buscando os docs relacionados à query, pelo arquivo invertido
-        for term in terms:
-            vectors = self.__index.get_docs_vectors(term)
-            for vec in vectors: # se vem doc repetido, sobrescreve
-                related_docs[vec] = vectors[vec]
-
-        # calculando os pesos para a consulta
-        consult_tfs = consult.normalize_frequences()
-        consult_w = {}
-        for term in consult_tfs:
-            consult_w[term] = consult_tfs[term] * self.__index.get_idf(term)
-            
-        # para cada doc, calculando os vetores com os pesos (tfidf)
-        ###
-        docs_tfidf = {}
-        ###
-        for doc in related_docs:
-            pre_vector = related_docs[doc].get_normalized_vector()
+        for doc in docs:
+            pre_vector = docs[doc].get_normalized_vector()
             tfidf = {}
             for term in pre_vector:
                 tfidf[term] = pre_vector[term] * self.__index.get_idf(term)
-            #pre_vector.set_tfidf(tfidf)
-            related_docs[doc] = pre_vector
 
-            ###
-            docs_tfidf[doc] = tfidf
+            self.__index.set_tfidf(doc, tfidf)
 
-            for i in tfidf:
-                print(doc, ' - ',i,' - ',tfidf[i])
-            ###
+    def make_seek(self, consult, alfa):
+        similarities = {}
+        related_docs = []
+        terms = consult.get_terms()
+        log = open(datetime.now().strftime("logs/%d_%m_%Y-%H_%M_%s.log"),'w')
 
-            similarities[doc] = self.calc_sim(tfidf, consult_w)
+        log.writelines(consult.show_consult())
+        log.writelines(self.__index.show_inverted_file())
         
-        ###
-        print_consult(consult, consult_w)
-        ###
+        # buscando os docs relacionados à query, pelo arquivo invertido
+        for term in terms:
+            rd = self.__index.get_related_docs(term)
+            for doc in rd: # se vem doc repetido, sobrescreve
+                if(doc not in related_docs):
+                    related_docs.append(doc)
 
-        print('')
-        for sim in similarities:
-            print(sim, " ", similarities[sim])
+        # calculando os pesos para a consulta
+        consult_tfs = consult.normalize_frequences(alfa)
+        consult_w = {}
 
-
-        
-
-"""
-    def make_seek(self, consult):
-        tab = {}
-        bowq = consult.get_bowq()
-
-        for word in bowq:
-            try:
-                tab[word] = dp(self.__index.get_word(word))
-            except:
-                pass
-
-        docs = sorted(self.__list_docs(tab))
-        show = []
-
-        for word in tab:
-            line = [word]
-            temp = []
-            for doc in docs:
-                if(doc not in tab[word]):
-                    tab[word][doc] = 0
-                line += [tab[word][doc]]
-                name = 'tfidf(' + doc + ')'
-                tab[word][name] = self.__index.get_tfidf(word,doc)
-                temp.append(tab[word][name])
+        for term in consult_tfs:
+            if(self.__index.is_term(term)):
+                consult_w[term] = consult_tfs[term] * self.__index.get_idf(term)
+            else:
+                consult_w[term] = 0
             
-            tab[word]['freqq'] = bowq[word]
-            tab[word]['df'] = self.__index.get_df(word)
-            tab[word]['idf'] = self.__index.get_idf(word)
-            
-            line += [tab[word]['freqq'], tab[word]['df'], tab[word]['idf']] + temp
-            show.append(line)
-
-        head = ['Query Words'] + docs + ['Freqq'] + ['DF'] + ['IDF'] + ['tfidf('+doc+')' for doc in docs]
-        #print(head)
-        print_table(show, header = head)
-"""     
-    #def get_ranking(self):        
-
+        for doc in related_docs:
+            similarities[doc] = self.__calc_sim(self.__index.get_tfidf(doc), consult_w)
         
-        
+        log.writelines(self.__index.print_vetorial_model())
+        log.writelines(print_consult(consult, consult_w))
+
+        rank = Ranking(similarities)
+        log.writelines(rank.show_ranking())

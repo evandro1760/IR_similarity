@@ -3,29 +3,30 @@ from components.textprocessor import Textprocessor
 from components.seeker import Seeker
 from model.consult import Consult
 from model.index import Index
+import sys
 
 
 sw = ['']
 for i in open('stopwords.txt','r').readlines():
     sw.append(i.replace('\n','').replace(' ','').lower())
 
-query = 'boi cavalo peão boi'
-
-tp = Textprocessor(sw)
-consult = tp.build_consult(query)
-consult.normalize_frequences()
-consult.show_consult()
-
-print('')
-
+alfa = sys.argv[1]
 indexer = Indexer(sw)
 indexer.load_inverted_index()
-indexer.get_index().show_inverted_file()
+index = indexer.get_index()
 
+while(True):
+    query = input("Entre com uma consulta:\n")
+    if(query == ''):
+        break
 
-teste = Seeker(indexer.get_index())
+    #query = 'boi cavalo peão boi'
+    tp = Textprocessor(sw)
+    consult = tp.build_consult(query)
+    consult.normalize_frequences()
 
-teste.make_seek(consult)
+    teste = Seeker(index)
+    teste.make_seek(consult, alfa)
 
 
 
